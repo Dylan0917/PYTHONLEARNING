@@ -42,6 +42,22 @@ while i <= 99999:
         print(i)
     i += 1
 print("-------------练习-回文end------------------")
+print("-------------练习-质数start------------------")
+zstest = 17
+i = 2
+if zstest == 1:
+    print("不是质数")
+if zstest == 2:
+    print("是质数")
+while i <= zstest-1:
+    if zstest % i == 0:
+        print("不是质数")
+        break
+    i += 1
+if i == zstest:
+    print("是质数")
+
+print("-------------练习-质数end------------------")
 
 
 
