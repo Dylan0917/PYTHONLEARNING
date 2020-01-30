@@ -40,7 +40,39 @@ print(max(list8))  # 5 最大数
 print(min(list8))  # 1 最小值
 print(list8.count(3))  # 1 查看元素中出现的次数
 
+list8.reverse()  # 翻转
+print(list8)
+list9 = [5, 6, 2, 1, 4, 8, 9]
+list9.sort()  # 升序
+print(list9)
 
+# 浅拷贝 引用拷贝
+list10 = [5, 6, 2, 1, 4, 8, 9]
+list11 = list10
+list10[1] = 300
+print(list11)  # [5, 300, 2, 1, 4, 8, 9]
 
+# 深拷贝
+list12 = [5, 6, 2, 1, 4, 8, 9]
+list13 = list12.copy()
+print(id(list12))
+print(id(list13))
+list12[1] = 300
+print(list13)  # [5, 6, 2, 1, 4, 8, 9]
 
+# 将元组转成列表
 
+# 分解质因数
+# 对n进行分解质因数，应先找到一个最小的质数k，然后按下述步骤完成：
+# (1)如果这个质数恰等于n，则说明分解质因数的过程已经结束，打印出即可。
+# (2)如果n<>k，但n能被k整除，则应打印出k的值，并用n除以k的商,作为新的正整数你n,
+# 　重复执行第一步。
+# (3)如果n不能被k整除，则用k+1作为k的值,重复执行第一步。
+num = int(input("分解质因数： "))
+i = 2
+while num != 1:
+    if num % i == 0:
+        print(i)
+        num //= i
+    else:
+        i += 1
