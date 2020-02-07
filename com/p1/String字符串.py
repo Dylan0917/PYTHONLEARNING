@@ -56,7 +56,14 @@ str6 = "**************you are a good man***********************"
 print(str6.lstrip("*"))  # 去除左侧的*
 print(str6.rstrip("*"))  # 去除右侧的*
 
+str7 = "yu is a good man"
+print(str7.split(" "))
+print(str7.split(" ", 2))   # 表示仅截取2个字符串
+print(str7.splitlines())
 
+print(str7.isalpha())  # 至少有一个字符且所有的字符都是字母
+print(str7.isalnum())  # 至少有一个字符且所有的字符都是字母或者数字
+print(str7.isupper())  # 至少有一个字符且且所有的字符都是大写的英文字母
 
 
 
