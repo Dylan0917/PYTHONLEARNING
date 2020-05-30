@@ -1,5 +1,6 @@
+# -*- coding: UTF-8 -*-
 '''
- 使用键值对存储，具有极快的查找速度
+使用键值对存储，具有极快的查找速度
 
 key的特性
 1.字典中的key必须唯一
@@ -13,7 +14,7 @@ list可变 不能作为key
 dict1 = {"tom":60,"lilei":80}
 # 获取数据
 print(dict1["tom"])
-ret = print(dict1.get("ti"))
+ret = dict1.get("ti")
 if ret == None:
     print("有")
 dict1["k1"] = 38
