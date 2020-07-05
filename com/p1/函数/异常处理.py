@@ -15,3 +15,21 @@ try:
     print(3 / 0)
 except ZeroDivisionError as e:
     print("除数为0")
+print("---------------------------------------------")
+try:
+    print(3/0)
+except BaseException as e:
+    print(e)
+finally:
+    print("----finally")
+
+def f1():
+    try:
+        print(2)
+        return 1
+    except BaseException as e:
+        return 0
+    finally:
+        print("finally")
+aa = f1()
+print(aa)
