@@ -26,3 +26,19 @@ str4 = f.readlines()
 print(str4)
 
 f.close()
+
+f1 = open("/Users/ywh/CODESRC/pw","w")
+# 将内容写入缓冲区
+f1.write("test write")
+# f1.flush()
+f1.close()
+
+
+f2 = open("/Users/ywh/CODESRC/pwb","wb")
+f2.write("dsfsd参数".encode("gbk"))
+f2.flush()
+f2.close()
+
+with open("/Users/ywh/CODESRC/pwb","rb") as rw1:
+    rw1str = rw1.read()
+    print(rw1str.decode("gbk"))
